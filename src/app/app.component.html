@@ -1,14 +1,10 @@
-<button (click)="increment()">Increment</button>
-<br>
-<div>
-    {{ cart$?.counter }} items
-    <ul>
-        <li *ngFor="let item of cart$ | async">
-            {{ item.title }}
-        </li>
-    </ul>
+<h3>Headbar</h3>
+<app-navbar></app-navbar>
+<hr>
+<h3>Product List</h3>
+<div class="uk-container uk-placeholder">
+  <app-product-list></app-product-list>
 </div>
-<br>
-<button (click)="decrement()">Decrement</button>
-<br>
-<button (click)="reset()">Reset Counter</button>
+<hr>
+<h3>Shopping Cart</h3>
+<app-shopping-cart></app-shopping-cart>

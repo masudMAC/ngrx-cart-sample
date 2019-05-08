@@ -14,7 +14,8 @@ export function cartReducer(state = products, action: ActionModel) {
 
         case ActionTypes.Remove:
             {
-                state.pop();
+                const index = state.indexOf(action.payload);
+                state.splice(index, 1);
                 console.log(state);
                 return state;
             };

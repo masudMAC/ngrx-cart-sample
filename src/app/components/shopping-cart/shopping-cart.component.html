@@ -1,0 +1,10 @@
+Cart: {{ (cart$ | async)?.length }} item(s)
+<br>
+<ul class="uk-list">
+  <li *ngFor="let item of cart$ | async">
+    {{ item.title }}
+    |
+    <a (click)="remove(item)">Remove</a>
+  </li>
+</ul>
+<button class="uk-button" (click)="reset()">CLEAR CART</button>

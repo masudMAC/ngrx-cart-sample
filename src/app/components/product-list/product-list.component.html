@@ -1,0 +1,8 @@
+<ul class="uk-list">
+  <li *ngFor="let product of products">
+    {{ product.title }} - 
+    {{ product.price | currency: 'BRL' }}
+    | 
+    <a (click)="add(product)">Add to Cart</a>
+  </li>
+</ul>
